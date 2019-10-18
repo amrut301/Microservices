@@ -1,0 +1,41 @@
+-- --------------------------------------------------------
+-- Host:                         127.0.0.1
+-- Server version:               10.3.13-MariaDB - mariadb.org binary distribution
+-- Server OS:                    Win64
+-- HeidiSQL Version:             9.5.0.5196
+-- --------------------------------------------------------
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+-- Dumping database structure for diy
+CREATE DATABASE IF NOT EXISTS `diy` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `diy`;
+
+-- Dumping structure for table diy.exchange_value
+CREATE TABLE IF NOT EXISTS `exchange_value` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `port` int(11) NOT NULL DEFAULT 0,
+  `currency_from` varchar(50) NOT NULL DEFAULT '0',
+  `currency_to` varchar(50) NOT NULL DEFAULT '0',
+  `conversion_multiple` bigint(11) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1005 DEFAULT CHARSET=latin1;
+
+-- Dumping data for table diy.exchange_value: ~4 rows (approximately)
+DELETE FROM `exchange_value`;
+/*!40000 ALTER TABLE `exchange_value` DISABLE KEYS */;
+INSERT INTO `exchange_value` (`id`, `port`, `currency_from`, `currency_to`, `conversion_multiple`) VALUES
+	(1001, 0, 'USD', 'INR', 64),
+	(1002, 0, 'EUR', 'INR', 23),
+	(1003, 0, 'POUN', 'INR', 89),
+	(1004, 0, 'SL', 'INR', 54);
+/*!40000 ALTER TABLE `exchange_value` ENABLE KEYS */;
+
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

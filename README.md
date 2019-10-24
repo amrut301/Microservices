@@ -2,7 +2,7 @@
 Complete Microservice 
 -This repo uses.
 -Spring-cloud.
--Spring cloud config server
+-Spring cloud config serverv
 -spring eureka server for registry
 -uses spring cloud config (uses git profile files) to pick the data from git / (configuration)
 -uses spring cloud-bus and RabbitMQ to to refresh any changes thats happening in the profile configuration without sending request to each service,
